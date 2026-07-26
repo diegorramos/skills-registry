@@ -5,8 +5,8 @@ description: >
   Use after spdd-canvas, before spdd-generate.
 ---
 
-1. Read `spdd/risks.md` for classification criteria and gate rules
-2. Read `spdd/a-approach.md` for risk mitigation strategies reference
+1. Read [Risk Classification](references/risks.md) for classification criteria and gate rules
+2. Read [Approach](references/a-approach.md) for risk mitigation strategies reference
 3. Read the latest Canvas from `spdd/prompts/`
 4. Read the latest analysis from `spdd/analysis/`
 5. Validate the gate:

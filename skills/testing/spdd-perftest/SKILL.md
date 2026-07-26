@@ -5,8 +5,8 @@ description: >
   Use as the final phase, after all functional tests are green.
 ---
 
-1. Read `spdd/perftest.md` for tooling reference (Vegeta, K6, ab)
-2. Read `spdd/s-safeguards.md` for SLO thresholds and deploy gate rules
+1. Read [Performance Test Templates](references/perftest.md) for tooling reference (Vegeta, K6, ab)
+2. Read [Safeguards](references/s-safeguards.md) for SLO thresholds and deploy gate rules
 3. Read the latest Canvas from `spdd/prompts/`
 4. Derive performance test scenarios from:
    - Requirements (R): performance SLAs/ACs

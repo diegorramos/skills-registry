@@ -5,8 +5,8 @@ description: >
   Use after spdd-risk-review passes.
 ---
 
-1. Read `spdd/tdd.md` for TDD rules and task done checklist
-2. Read `spdd/n-norms.md` for naming, error handling, observability, and testing conventions
+1. Read [TDD Rules](references/tdd.md) for the full TDD cycle and task done checklist
+2. Read [Norms](references/n-norms.md) for naming, error handling, observability, and testing conventions
 3. Read the latest Canvas from `spdd/prompts/`
 4. For EACH task in Canvas Operations (in order):
    - RED: write failing test first, confirm it fails

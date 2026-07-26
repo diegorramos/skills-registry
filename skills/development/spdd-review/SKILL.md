@@ -5,8 +5,8 @@ description: >
   Use to validate alignment between code and Canvas intent.
 ---
 
-1. Read `spdd/n-norms.md` for naming, SOLID, DDD, error handling, observability, testing standards
-2. Read `spdd/s-safeguards.md` for security checklist, SOLID/DDD invariants, and SLOs
+1. Read [Norms](references/n-norms.md) for naming, SOLID, DDD, error handling, observability, testing standards
+2. Read [Safeguards](references/s-safeguards.md) for security checklist, SOLID/DDD invariants, and SLOs
 3. Read the latest Canvas from `spdd/prompts/`
 4. Review implementation against:
    - Architecture: does code follow the layer structure defined in S?

@@ -1,6 +1,47 @@
 {
   "repository": "diegorramos/skills-registry",
   "branch": "main",
+  "agents": {
+    "opencode": {
+      "name": "OpenCode",
+      "skill_dir": ".opencode/agents",
+      "file_pattern": "{slug}.md",
+      "frontmatter_fields": {
+        "description": { "required": true },
+        "mode": { "default": "subagent", "values": ["primary", "subagent"] }
+      }
+    },
+    "devin": {
+      "name": "Devin",
+      "skill_dir": ".devin/skills/{slug}",
+      "file_pattern": "SKILL.md",
+      "frontmatter_fields": {
+        "name": { "required": true },
+        "description": { "required": true },
+        "triggers": { "default": ["user", "model"] },
+        "subagent": { "default": true },
+        "allowed-tools": { "default": ["read", "grep", "glob", "write"] }
+      }
+    },
+    "claude": {
+      "name": "Claude Code",
+      "skill_dir": ".claude/skills/{slug}",
+      "file_pattern": "SKILL.md",
+      "frontmatter_fields": {
+        "name": { "required": true },
+        "description": { "required": true }
+      }
+    },
+    "openclaw": {
+      "name": "OpenClaw",
+      "skill_dir": ".openclaw/workspace/skills/{slug}",
+      "file_pattern": "SKILL.md",
+      "frontmatter_fields": {
+        "name": { "required": true },
+        "description": { "required": true }
+      }
+    }
+  },
   "skills": [
     {
       "name": "sdd-workflow",
@@ -9,7 +50,12 @@
       "category": "development",
       "tags": ["sdd", "spec", "design", "planning"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true, "mode": "primary" },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-analyze",
@@ -18,7 +64,12 @@
       "category": "development",
       "tags": ["spdd", "analysis", "requirements", "risk"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-canvas",
@@ -27,7 +78,12 @@
       "category": "development",
       "tags": ["spdd", "canvas", "reasons", "prompt"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-generate",
@@ -36,7 +92,12 @@
       "category": "development",
       "tags": ["spdd", "tdd", "code-generation", "implementation"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-perftest",
@@ -45,7 +106,12 @@
       "category": "testing",
       "tags": ["spdd", "performance", "testing", "vegeta", "k6"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-review",
@@ -54,7 +120,12 @@
       "category": "development",
       "tags": ["spdd", "review", "code-review", "quality"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-risk-review",
@@ -63,7 +134,12 @@
       "category": "development",
       "tags": ["spdd", "risk", "validation", "governance"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-story",
@@ -72,7 +148,12 @@
       "category": "development",
       "tags": ["spdd", "stories", "invest", "requirements"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-sync",
@@ -81,7 +162,12 @@
       "category": "development",
       "tags": ["spdd", "sync", "canvas", "refactoring"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-test",
@@ -90,7 +176,12 @@
       "category": "testing",
       "tags": ["spdd", "testing", "tdd", "test-scenarios"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     },
     {
       "name": "spdd-update",
@@ -99,7 +190,12 @@
       "category": "development",
       "tags": ["spdd", "update", "canvas", "requirements"],
       "authors": ["diegorx"],
-      "agents": ["opencode", "devin", "claude"]
+      "agents": {
+        "opencode": { "enabled": true },
+        "devin": { "enabled": true },
+        "claude": { "enabled": true },
+        "openclaw": { "enabled": true }
+      }
     }
   ]
 }
