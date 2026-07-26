@@ -1,47 +1,6 @@
 {
   "repository": "diegorramos/skills-registry",
   "branch": "main",
-  "agents": {
-    "opencode": {
-      "name": "OpenCode",
-      "skill_dir": ".opencode/agents",
-      "file_pattern": "{slug}.md",
-      "frontmatter_fields": {
-        "description": { "required": true },
-        "mode": { "default": "subagent", "values": ["primary", "subagent"] }
-      }
-    },
-    "devin": {
-      "name": "Devin",
-      "skill_dir": ".devin/skills/{slug}",
-      "file_pattern": "SKILL.md",
-      "frontmatter_fields": {
-        "name": { "required": true },
-        "description": { "required": true },
-        "triggers": { "default": ["user", "model"] },
-        "subagent": { "default": true },
-        "allowed-tools": { "default": ["read", "grep", "glob", "write"] }
-      }
-    },
-    "claude": {
-      "name": "Claude Code",
-      "skill_dir": ".claude/skills/{slug}",
-      "file_pattern": "SKILL.md",
-      "frontmatter_fields": {
-        "name": { "required": true },
-        "description": { "required": true }
-      }
-    },
-    "openclaw": {
-      "name": "OpenClaw",
-      "skill_dir": ".openclaw/workspace/skills/{slug}",
-      "file_pattern": "SKILL.md",
-      "frontmatter_fields": {
-        "name": { "required": true },
-        "description": { "required": true }
-      }
-    }
-  },
   "skills": [
     {
       "name": "sdd-workflow",
@@ -49,13 +8,7 @@
       "description": "Full SDD cycle: clarify requirements -> spec -> design -> task breakdown",
       "category": "development",
       "tags": ["sdd", "spec", "design", "planning"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true, "mode": "primary" },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-analyze",
@@ -63,13 +16,7 @@
       "description": "Analyze requirements and scan codebase to surface domain concepts, risks, and design direction",
       "category": "development",
       "tags": ["spdd", "analysis", "requirements", "risk"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-canvas",
@@ -77,13 +24,7 @@
       "description": "Generate a complete REASONS Canvas from the latest analysis",
       "category": "development",
       "tags": ["spdd", "canvas", "reasons", "prompt"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-generate",
@@ -91,13 +32,7 @@
       "description": "Implement code using strict TDD (Red -> Green -> Refactor) per Canvas Operations",
       "category": "development",
       "tags": ["spdd", "tdd", "code-generation", "implementation"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-perftest",
@@ -105,13 +40,7 @@
       "description": "Generate performance tests from the Canvas Safeguards and Requirements",
       "category": "testing",
       "tags": ["spdd", "performance", "testing", "vegeta", "k6"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-review",
@@ -119,13 +48,7 @@
       "description": "Review the current implementation against the REASONS Canvas",
       "category": "development",
       "tags": ["spdd", "review", "code-review", "quality"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-risk-review",
@@ -133,13 +56,7 @@
       "description": "Validate that all risks are mitigated before any code is written",
       "category": "development",
       "tags": ["spdd", "risk", "validation", "governance"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-story",
@@ -147,13 +64,7 @@
       "description": "Break requirements or tasks into INVEST-compliant user stories",
       "category": "development",
       "tags": ["spdd", "stories", "invest", "requirements"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-sync",
@@ -161,13 +72,7 @@
       "description": "Sync code changes back to the REASONS Canvas",
       "category": "development",
       "tags": ["spdd", "sync", "canvas", "refactoring"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-test",
@@ -175,13 +80,7 @@
       "description": "Derive functional test scenarios from the Canvas for TDD implementation",
       "category": "testing",
       "tags": ["spdd", "testing", "tdd", "test-scenarios"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     },
     {
       "name": "spdd-update",
@@ -189,13 +88,7 @@
       "description": "Update the REASONS Canvas when requirements change (prompt-first rule)",
       "category": "development",
       "tags": ["spdd", "update", "canvas", "requirements"],
-      "authors": ["diegorx"],
-      "agents": {
-        "opencode": { "enabled": true },
-        "devin": { "enabled": true },
-        "claude": { "enabled": true },
-        "openclaw": { "enabled": true }
-      }
+      "authors": ["diegorx"]
     }
   ]
 }
