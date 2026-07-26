@@ -2,6 +2,10 @@
 
 Repository of skills for AI coding agents managed by [dirx](https://github.com/diegorramos/dirx).
 
+## Purpose
+
+This registry is a **pure catalog of skills**. It contains no agent-specific information. All agent knowledge (paths, transforms, frontmatter) lives exclusively in [dirx](https://github.com/diegorramos/dirx).
+
 ## Structure
 
 ```
@@ -18,17 +22,41 @@ skills/
 
 ## Skill Format
 
-Each skill follows the universal format:
+Each skill is agent-agnostic and follows this structure:
 
 ```
 skills/<category>/<skill-name>/
-├── manifest.json       # metadata, agents, version
 ├── SKILL.md            # universal skill content
-└── adapters/           # agent-specific files
-    ├── opencode/SKILL.md
-    ├── devin/SKILL.md
-    └── claude/commands/<name>.md
+└── references/         # optional linked files
+    ├── file1.md
+    └── file2.md
 ```
+
+- **SKILL.md** — The skill content with YAML frontmatter (name, description). Works with any agent.
+- **references/** — Optional supporting files linked from SKILL.md.
+
+## registry.json
+
+The registry metadata file lists all available skills:
+
+```json
+{
+  "repository": "diegorramos/skills-registry",
+  "branch": "main",
+  "skills": [
+    {
+      "name": "spdd-canvas",
+      "version": "1.0.0",
+      "description": "Generate a complete REASONS Canvas from the latest analysis",
+      "category": "development",
+      "tags": ["spdd", "canvas", "reasons", "prompt"],
+      "authors": ["diegorx"]
+    }
+  ]
+}
+```
+
+No agent-specific fields. dirx handles all agent transformation.
 
 ## Available Skills
 
@@ -48,11 +76,12 @@ skills/<category>/<skill-name>/
 
 ## Adding a Skill
 
-1. Create a directory under the appropriate category
-2. Add `manifest.json` with metadata
-3. Add `SKILL.md` with the universal skill content
-4. Add agent-specific adapters in `adapters/` folder
-5. Update `registry.json` with the new skill
+1. Create a directory under the appropriate category: `skills/<category>/<skill-name>/`
+2. Add `SKILL.md` with YAML frontmatter (`name`, `description`) and the skill content
+3. Optionally add `references/` folder with linked supporting files
+4. Update `registry.json` with the new skill entry (name, version, description, category, tags, authors)
+
+No agent-specific files needed. dirx transforms SKILL.md for each agent automatically.
 
 ## Usage with dirx
 
@@ -63,7 +92,10 @@ dirx list
 # Search skills
 dirx search spdd
 
-# Install a skill
+# Install interactively (select category, skills, agents, scope)
+dirx install
+
+# Install a specific skill
 dirx install spdd-canvas
 ```
 
