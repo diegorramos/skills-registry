@@ -1,0 +1,20 @@
+{
+  "name": "spdd-risk-review",
+  "version": "1.0.0",
+  "description": "Validate that all risks are mitigated before any code is written",
+  "category": "development",
+  "tags": ["spdd", "risk", "validation", "governance"],
+  "authors": ["diegorx"],
+  "license": "MIT",
+  "agents": {
+    "opencode": { "enabled": true },
+    "devin": { "enabled": true },
+    "claude": { "enabled": true }
+  },
+  "files": {
+    "universal": ["SKILL.md"],
+    "opencode": ["adapters/opencode/SKILL.md"],
+    "devin": ["adapters/devin/SKILL.md"],
+    "claude": ["adapters/claude/commands/spdd-risk-review.md"]
+  }
+}

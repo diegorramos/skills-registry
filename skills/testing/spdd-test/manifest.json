@@ -1,0 +1,20 @@
+{
+  "name": "spdd-test",
+  "version": "1.0.0",
+  "description": "Derive functional test scenarios from the Canvas for TDD implementation",
+  "category": "testing",
+  "tags": ["spdd", "testing", "tdd", "test-scenarios"],
+  "authors": ["diegorx"],
+  "license": "MIT",
+  "agents": {
+    "opencode": { "enabled": true },
+    "devin": { "enabled": true },
+    "claude": { "enabled": true }
+  },
+  "files": {
+    "universal": ["SKILL.md"],
+    "opencode": ["adapters/opencode/SKILL.md"],
+    "devin": ["adapters/devin/SKILL.md"],
+    "claude": ["adapters/claude/commands/spdd-test.md"]
+  }
+}

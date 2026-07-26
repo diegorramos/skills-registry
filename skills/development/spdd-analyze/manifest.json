@@ -1,0 +1,20 @@
+{
+  "name": "spdd-analyze",
+  "version": "1.0.0",
+  "description": "Analyze requirements and scan codebase to surface domain concepts, risks, and design direction",
+  "category": "development",
+  "tags": ["spdd", "analysis", "requirements", "risk"],
+  "authors": ["diegorx"],
+  "license": "MIT",
+  "agents": {
+    "opencode": { "enabled": true },
+    "devin": { "enabled": true },
+    "claude": { "enabled": true }
+  },
+  "files": {
+    "universal": ["SKILL.md"],
+    "opencode": ["adapters/opencode/SKILL.md"],
+    "devin": ["adapters/devin/SKILL.md"],
+    "claude": ["adapters/claude/commands/spdd-analyze.md"]
+  }
+}

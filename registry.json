@@ -1,0 +1,105 @@
+{
+  "repository": "diegorramos/skills-registry",
+  "branch": "main",
+  "skills": [
+    {
+      "name": "sdd-workflow",
+      "version": "1.0.0",
+      "description": "Full SDD cycle: clarify requirements -> spec -> design -> task breakdown",
+      "category": "development",
+      "tags": ["sdd", "spec", "design", "planning"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-analyze",
+      "version": "1.0.0",
+      "description": "Analyze requirements and scan codebase to surface domain concepts, risks, and design direction",
+      "category": "development",
+      "tags": ["spdd", "analysis", "requirements", "risk"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-canvas",
+      "version": "1.0.0",
+      "description": "Generate a complete REASONS Canvas from the latest analysis",
+      "category": "development",
+      "tags": ["spdd", "canvas", "reasons", "prompt"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-generate",
+      "version": "1.0.0",
+      "description": "Implement code using strict TDD (Red -> Green -> Refactor) per Canvas Operations",
+      "category": "development",
+      "tags": ["spdd", "tdd", "code-generation", "implementation"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-perftest",
+      "version": "1.0.0",
+      "description": "Generate performance tests from the Canvas Safeguards and Requirements",
+      "category": "testing",
+      "tags": ["spdd", "performance", "testing", "vegeta", "k6"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-review",
+      "version": "1.0.0",
+      "description": "Review the current implementation against the REASONS Canvas",
+      "category": "development",
+      "tags": ["spdd", "review", "code-review", "quality"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-risk-review",
+      "version": "1.0.0",
+      "description": "Validate that all risks are mitigated before any code is written",
+      "category": "development",
+      "tags": ["spdd", "risk", "validation", "governance"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-story",
+      "version": "1.0.0",
+      "description": "Break requirements or tasks into INVEST-compliant user stories",
+      "category": "development",
+      "tags": ["spdd", "stories", "invest", "requirements"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-sync",
+      "version": "1.0.0",
+      "description": "Sync code changes back to the REASONS Canvas",
+      "category": "development",
+      "tags": ["spdd", "sync", "canvas", "refactoring"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-test",
+      "version": "1.0.0",
+      "description": "Derive functional test scenarios from the Canvas for TDD implementation",
+      "category": "testing",
+      "tags": ["spdd", "testing", "tdd", "test-scenarios"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    },
+    {
+      "name": "spdd-update",
+      "version": "1.0.0",
+      "description": "Update the REASONS Canvas when requirements change (prompt-first rule)",
+      "category": "development",
+      "tags": ["spdd", "update", "canvas", "requirements"],
+      "authors": ["diegorx"],
+      "agents": ["opencode", "devin", "claude"]
+    }
+  ]
+}

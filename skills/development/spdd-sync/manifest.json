@@ -1,0 +1,20 @@
+{
+  "name": "spdd-sync",
+  "version": "1.0.0",
+  "description": "Sync code changes back to the REASONS Canvas",
+  "category": "development",
+  "tags": ["spdd", "sync", "canvas", "refactoring"],
+  "authors": ["diegorx"],
+  "license": "MIT",
+  "agents": {
+    "opencode": { "enabled": true },
+    "devin": { "enabled": true },
+    "claude": { "enabled": true }
+  },
+  "files": {
+    "universal": ["SKILL.md"],
+    "opencode": ["adapters/opencode/SKILL.md"],
+    "devin": ["adapters/devin/SKILL.md"],
+    "claude": ["adapters/claude/commands/spdd-sync.md"]
+  }
+}

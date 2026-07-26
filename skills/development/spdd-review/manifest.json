@@ -1,0 +1,20 @@
+{
+  "name": "spdd-review",
+  "version": "1.0.0",
+  "description": "Review the current implementation against the REASONS Canvas",
+  "category": "development",
+  "tags": ["spdd", "review", "code-review", "quality"],
+  "authors": ["diegorx"],
+  "license": "MIT",
+  "agents": {
+    "opencode": { "enabled": true },
+    "devin": { "enabled": true },
+    "claude": { "enabled": true }
+  },
+  "files": {
+    "universal": ["SKILL.md"],
+    "opencode": ["adapters/opencode/SKILL.md"],
+    "devin": ["adapters/devin/SKILL.md"],
+    "claude": ["adapters/claude/commands/spdd-review.md"]
+  }
+}
