@@ -3,7 +3,7 @@
     {
       "name": "development",
       "description": "Business logic, architecture, patterns",
-      "skills_count": 8
+      "skills_count": 10
     },
     {
       "name": "ui",
@@ -23,7 +23,7 @@
     {
       "name": "testing",
       "description": "TDD, BDD, performance tests",
-      "skills_count": 3
+      "skills_count": 2
     },
     {
       "name": "documentation",

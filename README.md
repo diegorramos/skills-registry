@@ -73,6 +73,7 @@ No agent-specific fields. dirx handles all agent transformation.
 | spdd-sync | development | Sync code changes back to the REASONS Canvas |
 | spdd-test | testing | Derive functional test scenarios from the Canvas for TDD implementation |
 | spdd-update | development | Update the REASONS Canvas when requirements change (prompt-first rule) |
+| teach | development | Teach the user a new skill or concept, within this workspace. |
 
 ## Adding a Skill
 

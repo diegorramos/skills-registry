@@ -89,6 +89,14 @@
       "category": "development",
       "tags": ["spdd", "update", "canvas", "requirements"],
       "authors": ["diegorx"]
+    },
+    {
+      "name": "teach",
+      "version": "1.0.0",
+      "description": "Teach the user a new skill or concept, within this workspace.",
+      "category": "development",
+      "tags": ["teaching", "learning", "lessons", "knowledge"],
+      "authors": ["mattpocock"]
     }
   ]
 }
